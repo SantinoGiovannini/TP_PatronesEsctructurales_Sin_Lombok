@@ -1,0 +1,8 @@
+Trabajo Practico: Patrones Estructurales sin Lombok
+
+Integrantes: Gustavo Santino Giovannini, Lucia Luconi, Angeles Castillo, Candela Casado, Juan Algozino.
+
+ACLARACIONES.
+
+1. En el caso que el código no se ejecute verificar el JDK usado, yo lo hice con el JDK 18 tuve ese problema al querer continuar el proyecto en otra PC, tenían diferentes JDK la principal con el 18 y la secundaria con el 20 y el secundaria no me dejaba ejecutarlo por tener diferente JDK.
+

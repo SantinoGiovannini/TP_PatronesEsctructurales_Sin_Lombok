@@ -1,8 +1,36 @@
-Trabajo Practico: Patrones Estructurales sin Lombok
+TRABAJO PRACTICO: Patrones Estructurales sin Lombok
 
-Integrantes: Gustavo Santino Giovannini, Lucia Luconi, Angeles Castillo, Candela Casado, Juan Algozino.
+INTEGRANTES: Gustavo Santino Giovannini, Lucia Luconi, Angeles Castillo, Candela Casado, Juan Algozino.
 
-ACLARACIONES.
+
+
+ACLARACIONES:
 
 1. En el caso que el código no se ejecute verificar el JDK usado, yo lo hice con el JDK 18 tuve ese problema al querer continuar el proyecto en otra PC, tenían diferentes JDK la principal con el 18 y la secundaria con el 20 y el secundaria no me dejaba ejecutarlo por tener diferente JDK.
 
+2. Dentro de la carpeta org.example se encuentra un archivo main que realiza un ejemplo de aplicacion de los patrones adapter, bridge, decorator y facade, ya que al ser más "sencillos" sus aplicaciones pueden ser condensadas tambien. Los demas patrones tienen sus propios archivos mains.
+
+
+
+APLICACIONES DE LOS PATRONES:
+
+ADAPTER:
+        - Aqui quien realiza el trabajo de Adapter es la clase ImpresionTetxoAdapter implementando la interface Impresora. Basicamente identifica que archivo se le esta pasando (archivo pdf o un texto plano) y a partir de eso envia la señal a la impresora para que comience la impresion.
+
+BRIDGE:
+        - Aqui se logra una evolucion separada del medio (Email y SMS) y el tipo de notificacion (Alerta, Promocion y Recordatorio), ahorrando el trabajo de tener que generar una clase para cada tipo de caso (EmailAlerta, EmailNotificacion, EMailPromocion, SMSAlerta, SMSNotificacion, SMSPromocion).
+
+DECORATOR:
+        - En este ejercicio el patron ayuda a añadir dinamicamente extras (como HD, UltraHD y Descargar) a un plan basico de subscripcion, lo que nos soluciona tener que contemplar combinaciones de clases derivadas de PlanBase, PlanHD, PlanUltraHD, y PlanDescarga.
+
+FACADE:
+        - En este patron se busca introducir una interfaz mas sencilla para que el cliente no interactue con clases complejas, aqui solo se muestran los articulos que el cliente compra, sin que el cliente opere directamente sobre la clase Carrito, Envio y Pago.
+
+FLYWEIGHT:
+        - Con este patron se busca compartir las partes comunes del estado entre varios objetos en vez de mantener toda la informacion en cada objeto, aplicado a este caso, en vez de que cada arbol sea una instancia de la clase, proponemos una estructura comun para todos los arboles, instanciamos unos pocos (en este caso Roble, Abedul y Pino) y luego colocamos estas instancias clonadas en partes especificas del mapa.
+
+PROXY:
+        - Con este patron buscamos controlar el acceso al objeto original, en este caso, realizamos un sistema de acceso a archivos restringidos que solo ciertos usuarios pueden interactuar, admin tiene permiso para abrir documento.txt pero usuario1 no.
+
+COMPOSITE:
+        - El sistema gestiona Platos individuales y Menús completos, la clse Composite sirve como una interfaz común para dichos platos y menús, logrando que se puedan manejar estas dos clases de la misma forma, en el main se puede ver como el primer menu consiste de dos platos y posee una variable con un tercer plato distinto.
